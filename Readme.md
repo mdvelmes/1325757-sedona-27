@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Михаил Дворянчиков](https://up.htmlacademy.ru/htmlcss/27/user/1325757).
-* Наставник: Дмитрий Вашкевич https://htmlacademy.ru/profile/id116959.
+* Наставник: [Дмитрий Вашкевич](https://htmlacademy.ru/profile/id116959).
 
 ---
 
