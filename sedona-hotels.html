@@ -22,7 +22,26 @@
     <h1>Каталог отелей</h1>
     <section>
       <h2>Фильтр отелей</h2>
-      <!-- Форма -->
+      <form action="" method="get" oninput="rating_output.value=rating.value">
+        <div>
+          <p>Инфраструктура:</p>
+          <label for=""><input type="checkbox" name="" id="" checked>бассейн</label>
+          <label for=""><input type="checkbox" name="" id="">парковка</label>
+          <label for=""><input type="checkbox" name="" id="">wi-fi</label>
+        </div>
+        <div>
+          <p>Тип жилья:</p>
+          <form action="" method="get">
+            <label for=""><input type="checkbox" name="" id="" checked>Гостиница</label>
+            <label for=""><input type="checkbox" name="" id="" checked>Мотель</label>
+            <label for=""><input type="checkbox" name="" id="" checked>Апартаменты</label>
+        </div>
+        <div>
+          <label for="rating"> Стоимость в сутки (Р):</label>
+          <input type="range" id="rating" min="0" max="3000" step="100">
+        </div>
+        <div>до <output name="rating_output">3000</output></div>
+      </form>
     </section>
     <section>
       <h2>Список отелей</h2>
