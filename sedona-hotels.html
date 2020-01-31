@@ -9,7 +9,7 @@
 <body>
   <header>
     <nav>
-      <a href="index.html"><img src="#" alt="лого Седона"></a>
+      <a href="index.html"><img src="img/logo.svg" width="140" height="71" alt="лого Седона"></a>
       <ul>
         <li><a href="">Информация</a></li>
         <li><a href="">Фото и видео</a></li>
@@ -22,26 +22,52 @@
     <h1>Каталог отелей</h1>
     <section>
       <h2>Фильтр отелей</h2>
-      <form action="" method="get" oninput="rating_output.value=rating.value">
-        <div>
-          <p>Инфраструктура:</p>
-          <label for=""><input type="checkbox" name="" id="" checked>бассейн</label>
-          <label for=""><input type="checkbox" name="" id="">парковка</label>
-          <label for=""><input type="checkbox" name="" id="">wi-fi</label>
+      <form class="filter" method="post" action="https://echo.htmlacademy.ru">
+        <fieldset>
+          <legend>Инфраструктура:</legend>
+          <ul>
+            <label><input type="checkbox" name="" id="" checked>бассейн</label>
+            <label><input type="checkbox" name="" id="">парковка</label>
+            <label><input type="checkbox" name="" id="">wi-fi</label>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Тип жилья:</legend>
+          <ul>
+            <label><input type="checkbox" name="" id="" checked>Гостиница</label>
+            <label><input type="checkbox" name="" id="" checked>Мотель</label>
+            <label><input type="checkbox" name="" id="" checked>Апартаменты</label>
+          </ul>
+        </fieldset>
+        <div class="filter-range">
+          <div class="filter-range-title">Стоимость в сутки (Р):</div>
+          <div class="price-controls">
+            <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+            <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+          </div>
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar"></div>
+            </div>
+            <div class="range-togle range-togle-min"></div>
+            <div class="range-togle range-togle-min"></div>
+          </div>
+          <button type="submit">Показать</button>
         </div>
-        <div>
-          <p>Тип жилья:</p>
-          <form action="" method="get">
-            <label for=""><input type="checkbox" name="" id="" checked>Гостиница</label>
-            <label for=""><input type="checkbox" name="" id="" checked>Мотель</label>
-            <label for=""><input type="checkbox" name="" id="" checked>Апартаменты</label>
-        </div>
-        <div>
-          <label for="rating"> Стоимость в сутки (Р):</label>
-          <input type="range" id="rating" min="0" max="3000" step="100">
-        </div>
-        <div>до <output name="rating_output">3000</output></div>
       </form>
+    </section>
+    <section>
+      <h3>Сортировка:</h3>
+      <ul>
+        <li><button type="button">По цене</button></li>
+        <li><button type="button">По типу</button></li>
+        <li><button type="button">По рейтингу</button></li>
+      </ul>
+      <p>Найдено: 3</p> <!-- тут вопрос: вывод результата может происать <output name="results">3</output>? тогда всю секцию нужно заключать между тегами <form></form>? Остальные баттоны тип баттон или сабмит всё же? -->
+      <div>
+        <button type="button"><img src="img/icon-up-dir.svg" width="11" height="10" alt=""></button> <!--здесь как и ниже может нужно <input type="img">? -->
+        <button type="button"><img src="img/icon-down-dir.svg" width="11" height="10" alt=""></button>
+      </div>
     </section>
     <section>
       <h2>Список отелей</h2>
@@ -49,15 +75,17 @@
         <li>
           <h3><a href="catalog-item.html">Amara Resort & Spa</a></h3>
           <p><span>ГОСТИНИЦА</span> <span>От 4000 Р.</span></p>
-          <a href="catalog-item.html"><img src="#" alt="Гостиница Amara Resort & Spa"></a>
-          <a href="catalog-item.html">Подробнее</a>
+          <a href="catalog-item.html"><img src="img/hotel-picture.png" width="135" height="90"
+              alt="Гостиница Amara Resort & Spa"></a>
+          <a href="catalog-item.html">Подробнее</a> <!--или нужно h3, пикчу и "подробнее" обернуть в одну ссылку для интеррактивности?-->
           <a href="#">Забронировать</a>
           <div>
             <ul>
-              <li class="stars"><img src="#" alt="star"></li>
-              <li class="stars"><img src="#" alt="star"></li>
-              <li class="stars"><img src="#" alt="star"></li>
-              <li class="stars"><img src="#" alt="star"></li>
+              <!-- как со звёздами всё-таки правильнее поступить? Понимаю, что это не совсем правильный вариант, так как нужно, чтоб рейтинг менялся руками от 1 до 5 звёзд -->
+              <li class="stars"><img src="img/star.svg" width="18" height="17" alt="star"></li>
+              <li class="stars"><img src="img/star.svg" width="18" height="17" alt="star"></li>
+              <li class="stars"><img src="img/star.svg" width="18" height="17" alt="star"></li>
+              <li class="stars"><img src="img/star.svg" width="18" height="17" alt="star"></li> 
             </ul>
             <p>Рейтинг: 8,5</p>
           </div>
@@ -65,14 +93,15 @@
         <li>
           <h3><a href="catalog-item.html">Desert Quail Inn</a></h3>
           <p><span>Мотель</span> <span>От 3000 Р.</span></p>
-          <a href="catalog-item.html"><img src="#" alt="Мотель Desert Quail Inn"></a>
+          <a href="catalog-item.html"><img src="img/hotel-picture (2).jpg" width="135" height="90"
+              alt="Мотель Desert Quail Inn"></a>
           <a href="catalog-item.html">Подробнее</a>
           <a href="#">Забронировать</a>
           <div>
             <ul>
-              <li class="stars"><img src="#" alt="star"></li>
-              <li class="stars"><img src="#" alt="star"></li>
-              <li class="stars"><img src="#" alt="star"></li>
+              <li class="stars"><img src="img/star.svg" width="18" height="17" alt="star"></li>
+              <li class="stars"><img src="img/star.svg" width="18" height="17" alt="star"></li>
+              <li class="stars"><img src="img/star.svg" width="18" height="17" alt="star"></li>
             </ul>
             <p>Рейтинг: 8,9</p>
           </div>
@@ -80,13 +109,14 @@
         <li>
           <h3><a href="catalog-item.html">Amara Resort & Spa</a></h3>
           <p><span>Апартаменты</span> <span>От 2000 Р.</span></p>
-          <a href="catalog-item.html"><img src="#" alt="Апартаменты Villas at Poco Diablo"></a>
+          <a href="catalog-item.html"><img src="img/hotel-picture (1).jpg" width="135" height="90"
+              alt="Апартаменты Villas at Poco Diablo"></a>
           <a href="catalog-item.html">Подробнее</a>
           <a href="#">Забронировать</a>
           <div>
             <ul>
-              <li class="stars"><img src="#" alt="star"></li>
-              <li class="stars"><img src="#" alt="star"></li>
+              <li class="stars"><img src="img/star.svg" width="18" height="17" alt="star"></li>
+              <li class="stars"><img src="img/star.svg" width="18" height="17" alt="star"></li>
             </ul>
             <p>Рейтинг: 9,2</p>
           </div>
@@ -100,21 +130,13 @@
     </p>
     <div>
       <ul>
-        <li>twitter</li>
-        <li>facebook</li>
-        <li>youtube</li>
+        <li><a href=""><img src="img/tw-icon.svg" width="17" height="15" alt=""></a></li>
+        <li><a href=""><img src="img/fb-icon.svg" width="12" height="22" alt=""></a></li>
+        <li><a href=""><img src="img/youtube-icon.svg" width="20" height="16" alt=""></a></li>
       </ul>
     </div>
-    <p>Website by <a href="#"><img src="logo_html" alt="HTML academy"></a></p>
+    <p>Website by <a href="#"><img src="img/logo-htmla.svg" width="115" height="41" alt="HTML academy"></a></p>
   </footer>
-  <div class="hotel-search hidden">
-    <h2>ПОИСК ГОСТИНИЦЫ В седоне</h2>
-    <form action="" method="get">
-      <label>Дата заезда: <input type="date" name=""></label>
-      <label>Дата выезда: <input type="date" name=""></label>
-      <input type="submit" value="найти">
-    </form>
-  </div>
 </body>
 
 </html>
