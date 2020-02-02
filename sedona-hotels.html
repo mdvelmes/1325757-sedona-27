@@ -11,32 +11,32 @@
     <nav>
       <a href="index.html"><img src="img/logo.svg" width="140" height="71" alt="лого Седона"></a>
       <ul>
-        <li><a href="">Информация</a></li>
-        <li><a href="">Фото и видео</a></li>
-        <li><a href="">Карта штата</a></li>
-        <li><a href="">Гостиницы</a></li>
+        <li><a href="#">Информация</a></li>
+        <li><a href="#">Фото и видео</a></li>
+        <li><a href="#">Карта штата</a></li>
+        <li><a href="#">Гостиницы</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <h1>Каталог отелей</h1>
+    <h1 class="visually-hidden">Каталог отелей</h1>
     <section>
-      <h2>Фильтр отелей</h2>
-      <form class="filter" method="post" action="https://echo.htmlacademy.ru">
+      <h2 class="visually-hidden">Фильтр отелей</h2>
+      <form class="filter" action="https://echo.htmlacademy.ru" method="post">
         <fieldset>
           <legend>Инфраструктура:</legend>
           <ul>
-            <label><input type="checkbox" name="" id="" checked>бассейн</label>
-            <label><input type="checkbox" name="" id="">парковка</label>
-            <label><input type="checkbox" name="" id="">wi-fi</label>
+            <label><input type="checkbox" name="pool" id="" checked>бассейн</label>
+            <label><input type="checkbox" name="parking" id="">парковка</label>
+            <label><input type="checkbox" name="wi-fi" id="">wi-fi</label>
           </ul>
         </fieldset>
         <fieldset>
           <legend>Тип жилья:</legend>
           <ul>
-            <label><input type="checkbox" name="" id="" checked>Гостиница</label>
-            <label><input type="checkbox" name="" id="" checked>Мотель</label>
-            <label><input type="checkbox" name="" id="" checked>Апартаменты</label>
+            <label><input type="checkbox" name="hotel" id="" checked>Гостиница</label>
+            <label><input type="checkbox" name="motel" id="" checked>Мотель</label>
+            <label><input type="checkbox" name="apartaments" id="" checked>Апартаменты</label>
           </ul>
         </fieldset>
         <div class="filter-range">
@@ -65,12 +65,12 @@
       </ul>
       <p>Найдено: 3</p>
       <div>
-        <a href="#"><img src="img/icon-up-dir.svg" width="11" height="10" alt=""></a>->
+        <a href="#"><img src="img/icon-up-dir.svg" width="11" height="10" alt=""></a>
         <a href="#"><img src="img/icon-down-dir.svg" width="11" height="10" alt=""></a>
       </div>
     </section>
     <section>
-      <h2>Список отелей</h2>
+      <h2 class="visually-hidden">Список отелей</h2>
       <ul>
         <li>
           <h3><a href="catalog-item.html">Amara Resort & Spa</a></h3>
@@ -129,9 +129,9 @@
     </p>
     <div>
       <ul>
-        <li><a href=""><img src="img/tw-icon.svg" width="17" height="15" alt=""></a></li>
-        <li><a href=""><img src="img/fb-icon.svg" width="12" height="22" alt=""></a></li>
-        <li><a href=""><img src="img/youtube-icon.svg" width="20" height="16" alt=""></a></li>
+        <li><a href="#"><img src="img/tw-icon.svg" width="17" height="15" alt="twitter"></a></li>
+        <li><a href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="facebook"></a></li>
+        <li><a href="#"><img src="img/youtube-icon.svg" width="20" height="16" alt="youtube"></a></li>
       </ul>
     </div>
     <p>Website by <a href="#"><img src="img/logo-htmla.svg" width="115" height="41" alt="HTML academy"></a></p>

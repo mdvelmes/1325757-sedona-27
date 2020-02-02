@@ -11,15 +11,15 @@
     <nav>
       <a href="index.html"><img src="img/logo.svg" width="140" height="71" alt="лого Седона"></a>
       <ul>
-        <li><a href="">Информация</a></li>
-        <li><a href="">Фото и видео</a></li>
-        <li><a href="">Карта штата</a></li>
-        <li><a href="">Гостиницы</a></li>
+        <li><a href="#">Информация</a></li>
+        <li><a href="#">Фото и видео</a></li>
+        <li><a href="#">Карта штата</a></li>
+        <li><a href="#">Гостиницы</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <h1>Главная страница</h1>
+    <h1 class="visually-hidden">Главная страница</h1>
     <img src="img/welcome.svg" width="459" height="353" alt="Welcome to the gorgeous SEDONA">
     <section>
       <h2>Седона — небольшой городок в Аризоне,
@@ -27,7 +27,7 @@
       </h2>
       <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       <section>
-        <h2>Преимущества</h2>
+        <h2 class="visually-hidden">Преимущества</h2>
         <section>
           <div>
             <h3>Настоящий городок</h3>
@@ -94,9 +94,9 @@
     </p>
     <div>
       <ul>
-        <li><a href=""><img src="img/tw-icon.svg" width="17" height="15" alt=""></a></li>
-        <li><a href=""><img src="img/fb-icon.svg" width="12" height="22" alt=""></a></li>
-        <li><a href=""><img src="img/youtube-icon.svg" width="20" height="16" alt=""></a></li>
+        <li><a href="#"><img src="img/tw-icon.svg" width="17" height="15" alt="twitter"></a></li>
+        <li><a href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="facebook"></a></li>
+        <li><a href="#"><img src="img/youtube-icon.svg" width="20" height="16" alt="youtube"></a></li>
       </ul>
     </div>
     <p>Website by <a href="#"><img src="img/logo-htmla.svg" width="115" height="41" alt="HTML academy"></a></p>
@@ -104,25 +104,25 @@
 
   <div class="hotel-search hidden">
     <h2>ПОИСК ГОСТИНИЦЫ В седоне</h2>
-    <form action="" method="get">
+    <form action="https://echo.htmlacademy.ru" method="get">
       <div>
-        <label>Дата заезда: <input type="date" name=""><img src="img/calendar.svg" width="21" height="22"
+        <label>Дата заезда: <input type="date" name="date1"><img src="img/calendar.svg" width="21" height="22"
             alt="иконка календаря"></label>
       </div>
       <div>
-        <label>Дата выезда: <input type="date" name=""><img src="img/calendar.svg" width="21" height="22"
+        <label>Дата выезда: <input type="date" name="date2"><img src="img/calendar.svg" width="21" height="22"
             alt="иконка календаря"></label>
       </div>
       <div>
-        <label for="">Взрослые:</label>
+        <label for="adults">Взрослые:</label>
         <button type="button">-</button>
-        <input type="text" name="" id="" step="1" value="2">
+        <input type="text" name="adults" id="adults" step="1" value="2">
         <button type="button">+</button>
       </div>
       <div>
-        <label for="">Дети:</label>
+        <label for="kids">Дети:</label>
         <button type="button">-</button>
-        <input type="text" name="" id="" step="1" value="0">
+        <input type="text" name="kids" id="kids" step="1" value="0">
         <button type="button">+</button>
       </div>
       <input type="submit" value="найти">
