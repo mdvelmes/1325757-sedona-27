@@ -1,0 +1,137 @@
+body {
+  width: 1200px;
+  margin: 0 40px;
+  padding: 0px;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #333333;
+  text-transform: uppercase;
+
+
+  background-color: #f1f1f1;
+  background-image: url(/img/background-photo.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-navigation {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a {
+  color: #000000;
+}
+
+.intro {
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.intro h2 {
+  color: #000000;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.intro::before {
+  background-image: url(/img/polygon.jpg);
+  background-repeat: no-repeat;
+}
+
+/*  */
+
+.search {
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+
+  background-color: #ffffff;
+}
+
+.search h2 {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.hotel-search {
+  font: inherit;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+
+  background-color: #766357;
+  border: none;
+}
+
+.hotel-search:hover {
+  background-color: #604e43;
+}
+
+.hotel-search:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #503e33;
+}
+
+.main-footer {
+  background-color: #ffffff;
+  height: 120px;
+
+}
+
+.footer-contacts {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.footer-contacts a {
+  color: #000000;
+}
+
+.footer-social {}
+
+.footer-copyright {}
+
+
+.modal-hotel-search {
+  width: 568px;
+  height: 395px;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+
+
+
+
+.main-header-logo {
+  background-color: #ffffff;
+  background-position: center;
+}
+
+.visually-hidden {
+  display: none;
+}
