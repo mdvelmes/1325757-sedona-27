@@ -121,16 +121,26 @@ a {
 }
 
 .footer-social .social-icon {
+  display: inline-block;
   list-style: none;
   width: 46px;
   height: 48px;
   background-color: #81b3d2;
+
+  margin: 0 auto;
 }
 
 .footer-copyright {
-  color: #000000;
+  display: inline-block;
 }
 
+  .footer-copyright img:hover {
+    fill: #81b3d2;
+}
+
+.footer-copyright img:active {
+  fill: #bdbbbc;
+}
 
 .modal-hotel-search {
   width: 568px;
@@ -182,6 +192,14 @@ a {
   color: #ffffff;
 }
 
+.search_hotel-form .button_search:hover {
+  background-color: #669ec0;
+}
+
+.search_hotel-form .button_search:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+}
 
 .visually-hidden {
   display: none;
