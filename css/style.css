@@ -21,6 +21,7 @@ a {
   text-decoration: none;
 }
 
+/* шапка */
 .main-navigation {
   font-size: 14px;
   line-height: 26px;
@@ -59,7 +60,7 @@ a {
   background-repeat: no-repeat;
 }
 
-/*  */
+/* основное содержание */
 
 .search {
   text-align: center;
@@ -99,6 +100,8 @@ a {
   background-color: #503e33;
 }
 
+/* футер */
+
 .main-footer {
   background-color: #ffffff;
   height: 120px;
@@ -130,17 +133,29 @@ a {
   margin: 0 auto;
 }
 
+.footer-social .social-icon:hover {
+  background-color: #669ec0;
+}
+
+.footer-social .social-icon:hover {
+  background-color: #5496bd;
+  /* затемнить svg не знаю как... */
+}
+
 .footer-copyright {
   display: inline-block;
 }
 
-  .footer-copyright img:hover {
-    fill: #81b3d2;
+/* не разобрался.. */
+.footer-copyright img:hover {
+  fill: #81b3d2;
 }
 
 .footer-copyright img:active {
   fill: #bdbbbc;
 }
+
+/* модальное окно */
 
 .modal-hotel-search {
   width: 568px;
@@ -201,6 +216,92 @@ a {
   background-color: #5496bd;
 }
 
+/* скрытие */
 .visually-hidden {
   display: none;
+}
+
+/* Стили внутренней страницы */
+
+.hotels-page {
+  background-image: none;
+}
+
+.hotel_list ul {
+  list-style: none;
+  background-color: #ffffff;
+}
+
+.hotel_list h3 {
+  font-size: 26px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.hotel_list h3:hover {
+  color: #81b3d2;
+}
+
+.hotel_list h3:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.hotel_list .hotel-picture {
+  width: 135px;
+  height: 90px;
+}
+
+.hotel_list .hotel_raiting {
+  /* list-style: none; */
+}
+
+.more_hotel {
+  font: inherit;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 8px 17px 7px;
+
+  width: 110px;
+  height: 27px;
+  background-color: #81b3d2;
+}
+
+.more_hotel:hover {
+  background-color: #669ec0;
+}
+
+.more_hotel:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #5496bd;
+}
+
+.hotel_reservation {
+  font: inherit;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 8px 16px;
+
+  width: 142px;
+  height: 27px;
+  background-color: #766357;
+}
+
+.hotel_reservation:hover {
+  background-color: #604e43;
+}
+
+.hotel_reservation:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #503e33;
+}
+
+.rating_result {
+  color: #666666;
+  text-align: center;
+
+  width: 110px;
+  height: 27px;
+  background-color: #f2f2f2;
 }
