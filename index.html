@@ -10,9 +10,11 @@
 </head>
 
 <body>
+
+  <!-- Шапка сайта -->
   <header class="main-header">
+    <a class="main-header-logo" href="index.html"><img src="img/logo.svg" width="140" height="71" alt="лого Седона"></a>
     <nav class="main-navigation">
-      <a class="main-header-logo" href="index.html"><img src="img/logo.svg" width="140" height="71" alt="лого Седона"></a>
       <ul class="site-navigation">
         <li><a href="#">Информация</a></li>
         <li><a href="#">Фото и видео</a></li>
@@ -21,14 +23,21 @@
       </ul>
     </nav>
   </header>
+
+  <!-- основное содержание -->
   <main class="container">
     <img src="img/welcome.svg" width="459" height="353" alt="Welcome to the gorgeous SEDONA">
+
     <section class="intro">
       <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
       <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
     </section>
+
+    <!-- преимущества -->
     <div class="features">
+
       <h2 class="visually-hidden">Преимущества</h2>
+
       <section>
         <div>
           <h3>Настоящий городок</h3>
@@ -37,6 +46,7 @@
         </div>
         <figure><img src="img/feature-picture_1.jpg" width="800" height="256" alt="красивая жизнь"></figure>
       </section>
+
       <section>
         <div>
           <h3>Жильё</h3>
@@ -54,6 +64,7 @@
           <img src="img/icon-2.svg" width="64" height="76" alt="подарок">
         </div>
       </section>
+
       <section>
         <div>
           <h3>Там есть Мост дьявола</h3>
@@ -62,6 +73,7 @@
         </div>
         <figure><img src="img/feature-picture_2.jpg" width="800" height="256" alt="каньон"></figure>
       </section>
+
       <section>
         <div>
           <h3>Небольшая площадь</h3>
@@ -80,51 +92,68 @@
         </div>
       </section>
     </div>
+
+    <!-- блок с кнопкой ПОИСК -->
     <section class="search">
       <h2>Заинтересовались?</h2>
       <p>
         Укажите предполагаемые даты поездки,<br>
         и мы покажем вам лучшие предложения гостиниц в седоне
       </p>
-      <button class="hotel-search" type="button">ПОИСК ГОСТИНИЦЫ В седоне</button>
+      <button class="search-button" type="button">ПОИСК ГОСТИНИЦЫ В седоне</button>
     </section>
+
+    <!-- Карта -->
     <img src="img/map.jpg" width="1200" height="593" alt="карта">
   </main>
+
+  <!-- Подвал сайта -->
   <footer class="main-footer">
-    <p class="footer-contacts">#visitSEDONA<br>
-      Тел: <a href="tel:+74956660266">+7(495) 666-02-66</a>
-    </p>
+
+    <div class="footer-contacts">
+      <p>#visitSEDONA</p>
+      <p>Тел: <a href="tel:+74956660266">+7(495) 666-02-66</a></p>
+    </div>
+
     <div class="footer-social">
       <ul>
-        <li class="social-icon"><a href="#"><img src="img/tw-icon.svg" width="17" height="15" alt="twitter"></a></li>
-        <li class="social-icon"><a href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="facebook"></a></li>
-        <li class="social-icon"><a href="#"><img src="img/youtube-icon.svg" width="20" height="16" alt="youtube"></a></li>
+        <li><a class="social-icon" href="#">Твиттер<!--<img src="img/tw-icon.svg" width="17" height="15" alt="twitter">--></a></li>
+        <li><a class="social-icon" href="#">Фейсбук<!--<img src="img/fb-icon.svg" width="12" height="22" alt="facebook">--></a></li>
+        <li><a class="social-icon" href="#">Ютуб<!--<img src="img/youtube-icon.svg" width="20" height="16" alt="youtube">--></a>
+        </li>
       </ul>
+
     </div>
-    <p class="footer-copyright">Website by <a href="#"><img src="img/logo-htmla.svg" width="115" height="41" alt="HTML academy"></a></p>
+    <p class="footer-copyright">Website by <a href="https://htmlacademy.ru/intensive/htmlcss"><img
+          src="img/logo-htmla.svg" width="115" height="41" alt="HTML academy"></a></p>
   </footer>
 
+  <!-- Модальное окно поиска гостиницы -->
   <div class="modal-hotel-search">
     <h2 class="visually-hidden">ПОИСК ГОСТИНИЦЫ В седоне</h2>
     <form class="search_hotel-form" action="https://echo.htmlacademy.ru" method="get">
       <div>
-        <label class="arrival_date">Дата заезда: <input type="date" name="date1"><img src="img/calendar.svg" width="21" height="22"
-            alt="иконка календаря"></label>
+        <label class="arrival_date">
+          Дата заезда:
+          <input type="text" name="arrival_date" placeholder="24 апреля 2017">
+        </label>
       </div>
       <div>
-        <label class="departure_date">Дата выезда: <input type="date" name="date2"><img src="img/calendar.svg" width="21" height="22"
-            alt="иконка календаря"></label>
+        <label class="departure_date">
+          Дата выезда:
+          <input type="text" name="departure_date" placeholder="4 июля 2017">
+        </label>
       </div>
       <div>
         <label for="adults">Взрослые:</label>
         <button type="button">-</button>
-        <input type="text" name="adults" id="adults" step="1" value="2">
+        <input type="number" name="adults" id="adults" step="1" value="2">
         <button type="button">+</button>
       </div>
       <div>
         <label for="kids">Дети:</label>
         <button type="button">-</button>
-        <input type="text" name="kids" id="kids" step="1" value="0">
+        <input type="number" name="kids" id="kids" step="1" value="0">
         <button type="button">+</button>
       </div>
       <input class="button_search" type="submit" value="найти">
