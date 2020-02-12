@@ -15,7 +15,7 @@
     <a><img src="img/logo.svg" width="140" height="71" alt="лого Седона"></a>
     <nav class="main-navigation">
       <ul class="site-navigation">
-        <li><a href="#">Информация</a></li>
+        <li><a class="curent" href="#">Информация</a></li>
         <li><a href="#">Фото и видео</a></li>
         <li><a href="#">Карта штата</a></li>
         <li><a href="#">Гостиницы</a></li>
@@ -30,10 +30,10 @@
     <!-- Фильтр -->
     <section>
       <h2 class="visually-hidden">Фильтр отелей</h2>
-      <form class="filter" action="https://echo.htmlacademy.ru" method="post">
+      <form class="filters" action="https://echo.htmlacademy.ru" method="post">
 
         <!-- Чекбоксы  -->
-        <fieldset>
+        <fieldset class="infrastructure">
           <legend>Инфраструктура:</legend>
           <ul>
             <li>
@@ -60,7 +60,7 @@
           </ul>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="housing">
           <legend>Тип жилья:</legend>
           <ul>
             <li>
@@ -107,17 +107,17 @@
     </section>
 
     <!-- Сортировка -->
-    <section>
+    <section class="sorting">
       <p>Найдено: 3</p>
       <h3>Сортировка:</h3>
       <ul>
-        <li><a href="#">По цене</a></li>
-        <li><a href="#">По типу</a></li>
-        <li><a href="#">По рейтингу</a></li>
+        <li><a class="price curent" href="#">По цене</a></li>
+        <li><a class="type" href="#">По типу</a></li>
+        <li><a class="range" href="#">По рейтингу</a></li>
       </ul>
       <div>
-        <a href="#"><img src="img/icon-up-dir.svg" width="11" height="10" alt=""></a>
-        <a href="#"><img src="img/icon-down-dir.svg" width="11" height="10" alt=""></a>
+        <a class="icon-up-dir" href="#"><img src="img/icon-up-dir.svg" width="11" height="10" alt=""></a>
+        <a class="icon-down-dir curent" href="#"><img src="img/icon-down-dir.svg" width="11" height="10" alt=""></a>
       </div>
     </section>
 
@@ -195,9 +195,12 @@
     </div>
     <div class="footer-social">
       <ul>
-        <li class="social-icon"><a href="#"><img src="img/tw-icon.svg" width="17" height="15" alt="twitter"></a></li>
-        <li class="social-icon"><a href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="facebook"></a></li>
-        <li class="social-icon"><a href="#"><img src="img/youtube-icon.svg" width="20" height="16" alt="youtube"></a>
+        <li><a class="social-icon" href="#">Твиттер
+            <!--<img src="img/tw-icon.svg" width="17" height="15" alt="twitter">--></a></li>
+        <li><a class="social-icon" href="#">Фейсбук
+            <!--<img src="img/fb-icon.svg" width="12" height="22" alt="facebook">--></a></li>
+        <li><a class="social-icon" href="#">Ютуб
+            <!--<img src="img/youtube-icon.svg" width="20" height="16" alt="youtube">--></a>
         </li>
       </ul>
     </div>
