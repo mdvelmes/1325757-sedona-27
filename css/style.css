@@ -1,7 +1,6 @@
 body {
   width: 1200px;
-  margin: 0 40px;
-  padding: 0px;
+  margin: 0 auto;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
@@ -26,6 +25,18 @@ a {
 }
 
 /* шапка */
+
+.main-header {
+  position: relative;
+}
+
+.main-header-logo {
+  position: absolute;
+left: 529px;
+  right: 50%;
+  top: 0;
+}
+
 .main-navigation {
   font-size: 14px;
   line-height: 26px;
@@ -55,10 +66,6 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.main-header-logo {
-  /* position: absolute; */
-  background-color: #ffffff;
-}
 
 
 /* основное содержание */
@@ -73,6 +80,7 @@ a {
   color: #000000;
   font-size: 21px;
   line-height: 26px;
+  font-weight: bold;
 }
 
 /* .intro::before {
@@ -475,4 +483,93 @@ a {
 .sorting a:focus {
   border-bottom: none;
   color: #81b3d2;
+}
+
+/* СЕТКА */
+
+
+.site-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 56px;
+}
+
+.site-navigation li {
+  width: 239px;
+  text-align: center;
+  outline: dotted;
+}
+
+.site-navigation li:nth-child(2) {
+  margin-right: auto;
+}
+
+.site-navigation li:nth-child(3) {
+  margin-left: auto;
+}
+
+.welcome {
+  display: flex;
+  justify-content: center;
+  margin-top: 57px;
+  margin-bottom: 79px;
+}
+
+.intro {
+  height: 216px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+align-items: center;
+}
+
+.intro h1 {
+  width: 450px;
+  margin-bottom: 38px;
+}
+
+.search {
+  height: 291px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-preview {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.main-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-contacts {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+}
+
+.footer-social ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-social li {
+  margin-right: 6px;
+}
+
+.footer-copyright {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
 }

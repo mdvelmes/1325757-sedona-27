@@ -6,6 +6,7 @@
   <title>HTML Academy: Седона</title>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="/css/normalize.css">
+  <!-- <link rel="stylesheet" href="/css/reset.css"> -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -13,20 +14,24 @@
 
   <!-- Шапка сайта -->
   <header class="main-header">
-    <a><img src="img/logo.svg" width="140" height="71" alt="лого Седона"></a>
+    <a class="main-header-logo"><img src="img/logo.svg" width="140" height="71" alt="лого Седона"></a>
     <nav class="main-navigation">
       <ul class="site-navigation">
+
         <li><a href="#">Информация</a></li>
         <li><a href="#">Фото и видео</a></li>
+
         <li><a href="#">Карта штата</a></li>
         <li><a href="#">Гостиницы</a></li>
+
       </ul>
     </nav>
   </header>
 
   <!-- основное содержание -->
   <main class="container">
-    <img src="img/welcome.svg" width="459" height="353" alt="Welcome to the gorgeous SEDONA">
+    <figure class="welcome"><img src="img/welcome.svg" width="459" height="353" alt="Welcome to the gorgeous SEDONA">
+    </figure>
 
     <section class="intro">
       <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
@@ -95,11 +100,13 @@
 
     <!-- блок с кнопкой ПОИСК -->
     <section class="search">
-      <h2>Заинтересовались?</h2>
-      <p>
-        Укажите предполагаемые даты поездки,<br>
-        и мы покажем вам лучшие предложения гостиниц в седоне
-      </p>
+      <div class="search-preview">
+        <h2>Заинтересовались?</h2>
+        <p>
+          Укажите предполагаемые даты поездки,<br>
+          и мы покажем вам лучшие предложения гостиниц в седоне
+        </p>
+      </div>
       <button class="search-button" type="button">ПОИСК ГОСТИНИЦЫ В седоне</button>
     </section>
 
