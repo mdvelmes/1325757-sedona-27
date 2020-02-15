@@ -347,3 +347,9 @@ template {
 [hidden] {
   display: none;
 }
+
+/* RESET "user agent stylesheet" */
+ul {
+  padding: 0;
+  margin: 0;
+}

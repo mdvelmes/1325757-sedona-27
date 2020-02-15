@@ -32,7 +32,7 @@ a {
 
 .main-header-logo {
   position: absolute;
-left: 529px;
+  left: 529px;
   right: 50%;
   top: 0;
 }
@@ -312,6 +312,14 @@ left: 529px;
   background-color: #ffffff;
 }
 
+.hotel_list li {
+  border-top: 1px solid #e5e5e5;
+}
+
+.hotel_list li:last-child {
+  border-bottom: 1px solid #e5e5e5;
+}
+
 .hotel_list h3 {
   font-size: 26px;
   line-height: 21px;
@@ -485,8 +493,7 @@ left: 529px;
   color: #81b3d2;
 }
 
-/* СЕТКА */
-
+/* СЕТКА главной */
 
 .site-navigation {
   display: flex;
@@ -524,7 +531,7 @@ left: 529px;
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
-align-items: center;
+  align-items: center;
 }
 
 .intro h1 {
@@ -553,9 +560,9 @@ align-items: center;
 }
 
 .footer-contacts {
-display: flex;
-flex-direction: column;
-justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .footer-social ul {
@@ -571,5 +578,49 @@ justify-content: space-around;
   display: flex;
   flex-direction: row;
   align-items: center;
+}
 
+/* Сетка внутренней страницы */
+
+.hotel_list ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.hotel_list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.hotel_list .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.hotel_list .container img {
+  order: -1;
+}
+
+.hotel_info {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .hotel_info p {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+} */
+
+.hotel_raiting {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.hotel_raiting ul {
+  display: flex;
+  flex-direction: row;
 }
