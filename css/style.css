@@ -48,6 +48,9 @@ a {
 
 .site-navigation {
   list-style: none;
+
+  margin: 0;
+  padding: 0;
 }
 
 .site-navigation a {
@@ -507,7 +510,7 @@ a {
 .site-navigation li {
   width: 239px;
   text-align: center;
-  outline: dotted;
+  /* outline: dotted; */
 }
 
 .site-navigation li:nth-child(2) {
