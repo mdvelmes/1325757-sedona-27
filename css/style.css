@@ -111,6 +111,8 @@ a {
   text-align: center;
   line-height: 21px;
 
+  height: 330px;
+
   background-color: #ffffff;
 }
 
@@ -626,4 +628,68 @@ a {
 .hotel_raiting ul {
   display: flex;
   flex-direction: row;
+}
+
+
+.features {
+  display: flex;
+  flex-direction: column;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.features-list .housing,
+.features-list .eat,
+.features-list .souvenirs {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.features-list .housing img,
+.features-list .eat img,
+.features-list .souvenirs img {
+  order: -1;
+}
+
+.other-feature,
+.feature-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 256px;
+}
+
+.feature-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 256px;
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sorting {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+}
+
+.sorting ul {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
 }
