@@ -73,8 +73,6 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-
-
 /* основное содержание */
 
 .intro {
@@ -84,7 +82,7 @@ a {
 }
 
 .welcome {
-  background-image: url(/img/welcome.svg);
+  /* background-image: url(/img/welcome.svg); */
   margin: 76px auto 79px;
   width: 459px;
   height: 353px;
@@ -92,21 +90,11 @@ a {
 }
 
 .welcome-block-bottom {
-  background-image: url(/img/polygon.png);
+  /* background-image: url(/img/polygon.png); */
+  /* outline: dashed; */
   margin: auto;
   width: 1200px;
   height: 57px;
-}
-
-/* .welcome::after {
-   content: "AAAAAAAAAAAAAAAA";
- 
-  background-image: url(/img/polygon.png);
-  background-repeat:  no-repeat;;
-
-  position: absolute;
-  top: 450px;
-  */
 }
 
 .intro h1 {
@@ -661,9 +649,7 @@ a {
   align-items: center;
 }
 
-.features-list .housing,
-.features-list .eat,
-.features-list .souvenirs {
+.features-list-item {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
