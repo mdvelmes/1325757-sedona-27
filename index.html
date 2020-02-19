@@ -35,10 +35,12 @@
         <img src="img/welcome.svg" width="459" height="353" alt="Welcome to the gorgeus SEDONA">
       </div>
 
-      <div class="welcome-block-bottom">
+      <!-- <div class="welcome-block-bottom">
         <img src="img/polygon.png" alt="bottom block">
-      </div>
-<!-- <img class="welcome-block-bottom" src="img/polygon.png" alt="" width="1200" height="57"> -->
+      </div> -->
+
+      <!-- <img class="welcome-block-bottom" src="img/polygon.png" alt="" width="1200" height="57"> -->
+
       <section class="intro">
         <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
@@ -126,7 +128,7 @@
       </section>
 
       <!-- Карта -->
-      <img src="img/map.jpg" width="1200" height="593" alt="карта">
+      <div class="map-sedona"><img src="img/map.jpg" width="1200" height="593" alt="карта"></div>
     </main>
 
     <!-- Подвал сайта -->
@@ -154,32 +156,30 @@
     </footer>
 
     <!-- Модальное окно поиска гостиницы -->
-    <div class="modal-hotel-search visually-hidden">
+    <div class="modal-hotel-search <!-- visually-hidden--> ">
       <h2 class="visually-hidden">ПОИСК ГОСТИНИЦЫ В седоне</h2>
       <form class="search_hotel-form" action="https://echo.htmlacademy.ru" method="get">
-        <div>
-          <label class="arrival_date">
-            Дата заезда:
-            <input type="text" name="arrival_date" placeholder="24 апреля 2017">
-          </label>
+        <div class="dates">
+          <label for="arrival_date">Дата заезда:</label>
+          <input type="text" name="arrival_date" id="arrival_date" placeholder="24 апреля 2017">
         </div>
-        <div>
-          <label class="departure_date">
-            Дата выезда:
-            <input type="text" name="departure_date" placeholder="4 июля 2017">
-          </label>
+        <div class="dates">
+          <label for="departure_date">Дата выезда:</label>
+          <input type="text" name="departure_date" id="departure_date" placeholder="4 июля 2017">
         </div>
-        <div>
-          <label for="adults">Взрослые:</label>
-          <button type="button">-</button>
-          <input type="number" name="adults" id="adults" step="1" value="2">
-          <button type="button">+</button>
-        </div>
-        <div>
-          <label for="kids">Дети:</label>
-          <button type="button">-</button>
-          <input type="number" name="kids" id="kids" step="1" value="0">
-          <button type="button">+</button>
+        <div class="persons">
+          <div>
+            <label for="adults">Взрослые:</label>
+            <button type="button">-</button>
+            <input type="number" name="adults" id="adults" step="1" value="2">
+            <button type="button">+</button>
+          </div>
+          <div>
+            <label for="kids">Дети:</label>
+            <button type="button">-</button>
+            <input type="number" name="kids" id="kids" step="1" value="0">
+            <button type="button">+</button>
+          </div>
         </div>
         <input class="button_search" type="submit" value="найти">
       </form>
