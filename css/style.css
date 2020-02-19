@@ -703,9 +703,7 @@ height: 57px; */
   align-items: center;
 }
 
-.features-list .housing img,
-.features-list .eat img,
-.features-list .souvenirs img {
+.features-list-item img {
   order: -1;
 }
 
@@ -723,6 +721,10 @@ height: 57px; */
   flex-direction: column;
   justify-content: center;
   height: 256px;
+}
+
+.feature-item:last-of-type img {
+  order: -1;
 }
 
 .filters {
