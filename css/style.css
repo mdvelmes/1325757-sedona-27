@@ -132,7 +132,7 @@ height: 57px; */
 
 .feature-description p {
   text-align: center;
-  width: 300px; 
+  width: 300px;
 }
 
 .features-list {
@@ -157,14 +157,14 @@ height: 57px; */
   line-height: 21px;
   width: 150px;
   text-align: center;
-  margin: 0;
+  margin: 30px 0;
 
   color: #000000;
 }
 
-.other-feature p {
-width: 250px;
-}
+/* .other-feature p {
+  width: 250px;
+} */
 
 .search {
   text-align: center;
@@ -595,6 +595,22 @@ width: 250px;
   color: #81b3d2;
 }
 
+.icon-dir path {
+  fill: #cacaca;
+}
+
+.icon-dir:hover path {
+  fill: #231F20;
+}
+
+.icon-dir path .curent,
+.icon-dir:visited path
+ {
+  fill: #81b3d2;
+}
+
+
+
 /* СЕТКА главной */
 
 .site-navigation {
@@ -734,7 +750,7 @@ width: 250px;
 .hotel_description {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-content: center;
 
   margin-left: 72px;
 
@@ -791,14 +807,21 @@ width: 250px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .features-list-item {
-  width: 300px;
+  /* width: 300px; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-basis: 25%;
+  /* flex-grow: 1; */
+}
+
+.features-list-item p {
+  margin: 0;
 }
 
 .features-list-item img {
@@ -813,11 +836,12 @@ width: 250px;
   min-height: 256px;
 }
 
-.other-feature div {
+.other-feature-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: stretch;
+  /* flex-basis: 257px; */
 }
 
 .feature-description {
