@@ -38,23 +38,23 @@
           <fieldset class="infrastructure">
             <legend>Инфраструктура:</legend>
             <ul>
-              <li>
+              <li class="filter-option">
                 <label>
-                  <input type="checkbox" name="pool" class="visually-hidden" checked>
+                  <input type="checkbox" name="pool" class="visually-hidden filter-input" checked>
                   <span class="checkbox-indicator"></span>
                   бассейн
                 </label>
               </li>
-              <li>
+              <li class="filter-option">
                 <label>
-                  <input type="checkbox" name="parking" class="visually-hidden">
+                  <input type="checkbox" name="parking" class="visually-hidden filter-input">
                   <span class="checkbox-indicator"></span>
                   парковка
                 </label>
               </li>
-              <li>
+              <li class="filter-option">
                 <label>
-                  <input type="checkbox" name="wi-fi" class="visually-hidden">
+                  <input type="checkbox" name="wi-fi" class="visually-hidden filter-input">
                   <span class="checkbox-indicator"></span>
                   wi-fi
                 </label>
@@ -65,23 +65,23 @@
           <fieldset class="housing">
             <legend>Тип жилья:</legend>
             <ul>
-              <li>
+              <li class="filter-option">
                 <label>
-                  <input type="checkbox" name="hotel" class="visually-hidden" checked>
+                  <input type="checkbox" name="hotel" class="visually-hidden filter-input" checked>
                   <span class="checkbox-indicator"></span>
                   Гостиница
                 </label>
               </li>
-              <li>
+              <li class="filter-option">
                 <label>
-                  <input type="checkbox" name="motel" class="visually-hidden" checked>
+                  <input type="checkbox" name="motel" class="visually-hidden filter-input" checked>
                   <span class="checkbox-indicator"></span>
                   Мотель
                 </label>
               </li>
-              <li>
+              <li class="filter-option">
                 <label>
-                  <input type="checkbox" name="apartaments" class="visually-hidden" checked>
+                  <input type="checkbox" name="apartaments" class="visually-hidden filter-input" checked>
                   <span class="checkbox-indicator"></span>
                   Апартаменты
                 </label>
@@ -93,8 +93,8 @@
           <div class="filter-range">
             <div class="filter-range-title">Стоимость в сутки (Р):</div>
             <div class="price-controls">
-              <label class="min-price">от <input type="text" name="min-price" value="0"></label>
-              <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+              <label class="min-price">от <input type="number" name="min-price" value="0"></label>
+              <label class="max-price">до <input type="number" name="max-price" value="3000"></label>
             </div>
             <div class="range-controls">
               <div class="scale">
@@ -103,21 +103,24 @@
               <div class="range-togle range-togle-min"></div>
               <div class="range-togle range-togle-min"></div>
             </div>
-            <button type="submit">Показать</button>
+            <button class="btn-transparent" type="submit">Показать</button>
           </div>
+
         </form>
       </section>
 
       <!-- Сортировка -->
       <section class="sorting">
         <p>Найдено: 3</p>
-        <h3>Сортировка:</h3>
-        <ul>
-          <li><a class="price curent" href="#">По цене</a></li>
-          <li><a class="type" href="#">По типу</a></li>
-          <li><a class="range" href="#">По рейтингу</a></li>
-        </ul>
-        <div>
+        <div class="sort-list">
+          <h3>Сортировка:</h3>
+          <ul>
+            <li><a class="sort-block curent" href="#">По цене</a></li>
+            <li><a class="sort-block" href="#">По типу</a></li>
+            <li><a class="sort-block" href="#">По рейтингу</a></li>
+          </ul>
+        </div>
+        <div class="direction">
           <a class="icon-dir" href="#">
             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
               <path fill="#231F20" d="M5.5 0L0 10h11z" />

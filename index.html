@@ -177,7 +177,7 @@
         </a>
       </p>
 
-    <!-- </div> -->
+      <!-- </div> -->
     </footer>
 
     <!-- Модальное окно поиска гостиницы -->
@@ -186,24 +186,24 @@
       <form class="search_hotel-form" action="https://echo.htmlacademy.ru" method="get">
         <div class="dates">
           <label for="arrival_date">Дата заезда:</label>
-          <input type="text" name="arrival_date" id="arrival_date" placeholder="24 апреля 2017">
+          <input class="calendar-icon" type="text" name="arrival_date" id="arrival_date" placeholder="24 апреля 2017">
         </div>
         <div class="dates">
           <label for="departure_date">Дата выезда:</label>
-          <input type="text" name="departure_date" id="departure_date" placeholder="4 июля 2017">
+          <input class="calendar-icon" type="text" name="departure_date" id="departure_date" placeholder="4 июля 2017">
         </div>
         <div class="persons">
           <div>
             <label for="adults">Взрослые:</label>
-            <button type="button">-</button>
+            <button class="regulate less" type="button"></button>
             <input type="number" name="adults" id="adults" step="1" value="2">
-            <button type="button">+</button>
+            <button class="regulate more" type="button"></button>
           </div>
           <div>
             <label for="kids">Дети:</label>
-            <button type="button">-</button>
+            <button class="regulate less" type="button"></button>
             <input type="number" name="kids" id="kids" step="1" value="0">
-            <button type="button">+</button>
+            <button class="regulate more" type="button"></button>
           </div>
         </div>
         <input class="button_search" type="submit" value="найти">
