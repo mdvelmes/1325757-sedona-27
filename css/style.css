@@ -120,17 +120,14 @@ height: 57px; */
 /* Преимущества */
 
 .feature-description {
-  box-sizing: border-box;
-  width: 400px;
-
   text-align: center;
   line-height: 21px;
-  padding-right: 50px;
-  padding-left: 40px;
+  width: 400px;
 
   color: #ffffff;
   background-color: #81b3d2;
 }
+
 
 .feature-description h3 {
   font-size: 21px;
@@ -141,6 +138,7 @@ height: 57px; */
 
 .feature-description p {
   text-align: center;
+  width: 300px;
 }
 
 .features-list {
@@ -312,9 +310,9 @@ height: 57px; */
 
 /* модальное окно */
 
-.modal {
-  /* display: none; */
-}
+/* .modal {
+   display: none;
+} */
 
 .modal-hotel-search {
   font-size: 14px;
@@ -433,8 +431,11 @@ height: 57px; */
   opacity: 0.3;
 } */
 
-.regulate {
+.persons {
   position: relative;
+}
+
+.regulate {
   width: 38px;
   height: 38px;
   padding: 0;
@@ -446,11 +447,12 @@ height: 57px; */
 .regulate.less::after {
   content: "";
 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-  transform: translateY(-50%);
+  position: relative;
+ 
+  top: 0;
+  left: 0;
+  /* transform: translateX(-50%);
+  transform: translateY(-50%); */
 
   width: 12px;
   height: 3px;
@@ -462,7 +464,7 @@ height: 57px; */
 .regulate.more::after {
   content: "";
 
-  position: absolute;
+  position: relative;
 
   top: 50%;
   left: 50%;
@@ -766,6 +768,73 @@ height: 57px; */
   margin-bottom: 38px;
 }
 
+/* CЕТКА преимуществ */
+
+.features {
+  display: flex;
+  flex-direction: column;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* align-items: center; */
+}
+
+.features-list-item {
+  /* width: 300px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 25%;
+  /* flex-grow: 1; */
+}
+
+.features-list-item p {
+  margin: 0;
+}
+
+.features-list-item img {
+  order: -1;
+}
+
+.feature-item,
+.other-feature {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 256px;
+}
+
+.other-feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: stretch;
+  /* flex-basis: 257px; */
+}
+
+.feature-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* align-items: center;
+  height: 256px;*/
+}
+
+.feature-description img {
+  display: block;
+}
+
+/* ПО-РАЗНОМУ ПЕРЕПРОБОВАЛ!!!! НИКАК НЕ РАБОТАЕТ... :first-of-type РАБОТАЕТ, last - НЕТ */
+
+.feature-item.reverse img {
+  order: -1;
+}
+
 .search {
   height: 291px;
   display: flex;
@@ -891,393 +960,342 @@ height: 57px; */
   justify-content: flex-end;
 }
 
+/* СЕТКА фильтров */
 
-.features {
+.filters {
   display: flex;
-  flex-direction: column;
-}
-
-.features-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  /* align-items: center; */
-}
-
-.features-list-item {
-  /* width: 300px; */
-  display: flex;
-  flex-direction: column;
+  /* justify-content: space-between; */
   align-items: center;
-  justify-content: center;
-  flex-basis: 25%;
-  /* flex-grow: 1; */
 }
 
-.features-list-item p {
+.filters legend {
+  margin-bottom: 30px;
+}
+
+.filters fieldset {
+  padding: 0;
+  margin: 30px 115px 35px 70px;
+}
+
+.filters fieldset:last-of-type {
+  margin-left: 0;
+}
+
+.filters ul {
   margin: 0;
+  padding: 0;
 }
 
-.features-list-item img {
-  order: -1;
+.filter-option {
+  margin-bottom: 30px;
+  padding-left: 45px;
+
+  /* box-shadow: 0 0 0 3px red; */
 }
 
-.feature-item,
-.other-feature {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 256px;
+.filter-option:last-of-type {
+  margin-bottom: 0;
 }
 
-.other-feature-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: stretch;
-  /* flex-basis: 257px; */
-}
+.filter-option label {
+  position: relative;
 
-.feature-description {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  */
-
-  /* align-items: center;
-  height: 256px;
-}
-
-.feature-description img {
   display: block;
+
+  cursor: pointer;
+  user-select: none;
 }
 
-/* ПО-РАЗНОМУ ПЕРЕПРОБОВАЛ!!!! НИКАК НЕ РАБОТАЕТ... :first-of-type РАБОТАЕТ, last - НЕТ */
-  .feature-item.reverse img {
-    order: -1;
-  }
+.filter-input+.checkbox-indicator {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  margin-left: -45px;
 
-  /* СЕТКА фильтров */
+  background-image: url(../img/checkbox-off.svg);
+  background-repeat: no-repeat;
+}
 
-  .filters {
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
-  }
+.filter-input:checked+.checkbox-indicator {
+  position: absolute;
+  width: 27px;
+  height: 23px;
+  margin-left: -45px;
 
-  .filters legend {
-    margin-bottom: 30px;
-  }
+  background-image: url(../img/checkbox-on.svg);
+  background-repeat: no-repeat;
+}
 
-  .filters fieldset {
-    padding: 0;
-    margin: 30px 115px 35px 70px;
-  }
+.filter-input:disabled+.checkbox-indicator {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  margin-left: -45px;
 
-  .filters fieldset:last-of-type {
-    margin-left: 0;
-  }
+  background-image: url(../img/checkbox-off-disabled.svg);
+  background-repeat: no-repeat;
+}
 
-  .filters ul {
-    margin: 0;
-    padding: 0;
-  }
+.filter-input:checked:disabled+.checkbox-indicator {
+  position: absolute;
+  width: 27px;
+  height: 23px;
+  margin-left: -45px;
 
-  .filter-option {
-    margin-bottom: 30px;
-    padding-left: 45px;
+  background-image: url(../img/checkbox-on-disabled.svg);
+  background-repeat: no-repeat;
+}
 
-    /* box-shadow: 0 0 0 3px red; */
-  }
-
-  .filter-option:last-of-type {
-    margin-bottom: 0;
-  }
-
-  .filter-option label {
-    position: relative;
-
-    display: block;
-
-    cursor: pointer;
-    user-select: none;
-  }
-
-  .filter-input+.checkbox-indicator {
-    position: absolute;
-    width: 23px;
-    height: 23px;
-    margin-left: -45px;
-
-    background-image: url(../img/checkbox-off.svg);
-    background-repeat: no-repeat;
-  }
-
-  .filter-input:checked+.checkbox-indicator {
-    position: absolute;
-    width: 27px;
-    height: 23px;
-    margin-left: -45px;
-
-    background-image: url(../img/checkbox-on.svg);
-    background-repeat: no-repeat;
-  }
-
-  .filter-input:disabled+.checkbox-indicator {
-    position: absolute;
-    width: 23px;
-    height: 23px;
-    margin-left: -45px;
-
-    background-image: url(../img/checkbox-off-disabled.svg);
-    background-repeat: no-repeat;
-  }
-
-  .filter-input:checked:disabled+.checkbox-indicator {
-    position: absolute;
-    width: 27px;
-    height: 23px;
-    margin-left: -45px;
-
-    background-image: url(../img/checkbox-on-disabled.svg);
-    background-repeat: no-repeat;
-  }
-
-  .filter-range {
-    /* display: flex;
+.filter-range {
+  /* display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between; */
-    margin-left: auto;
-    margin-right: 74px;
+  margin-left: auto;
+  margin-right: 74px;
+}
+
+.filter-range {
+  width: 330px;
+
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.filter-range-title {
+  margin-bottom: 9px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.price-controls {
+  position: relative;
+
+  height: 36px;
+  margin-bottom: 20px;
+
+  font-size: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.range-toggle:hover {
+  top: -10px;
+
+  border: 9px solid #ffffff;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
+}
+
+
+/* СЕТКА сортировки */
+.sorting {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin: 30px 0;
+}
+
+.sorting p {
+  /* display: inline-block; */
+  margin: 0;
+  margin-left: 72px;
+  margin-right: 50px;
+}
+
+.sort-list {
+  display: flex;
+  flex-grow: 1;
+}
+
+.sort-list h3 {
+  margin: 0;
+}
+
+.sort-list ul {
+  display: flex;
+  margin: 0;
+}
+
+.sort-list li {
+  margin-right: 33px;
+}
+
+.sorting .direction {
+  /* display: inline-block; */
+  margin-right: 73px;
+  /* margin-left: auto; */
+}
+
+
+/* Сетка модального окна */
+
+
+.search_hotel-form {
+  padding: 55px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+}
+
+.search_hotel-form .dates {
+  /* flex-basis: 38px; */
+  margin-bottom: 29px;
+}
+
+.search_hotel-form .dates {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .search_hotel-form .input-wrapper {
+  display: flex;
+} */
+
+.search_hotel-form .input-wrapper {
+  position: relative;
+}
+
+.search_hotel-form .calendar-icon {
+  position: absolute;
+  top: 9px;
+  left: 326px;
   }
 
-  .filter-range {
-    width: 330px;
+.search_hotel-form .persons {
+  margin-top: 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 54px;
+}
 
-    color: #ffffff;
-    text-transform: uppercase;
-  }
+.persons div {
+  display: flex;
+  align-items: center;
+}
 
-  .filter-range-title {
-    margin-bottom: 9px;
+.persons .adults,
+.persons .kids {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 21px;
-  }
+  justify-content: space-between;
+  width: 50%;
+}
 
-  .price-controls {
-    position: relative;
+.persons label {
+  margin-right: 29px;
+}
 
-    height: 36px;
-    margin-bottom: 20px;
-
-    font-size: 0;
-
-    border: 2px solid #ffffff;
-    border-radius: 2px;
-  }
-
-  .price-controls::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    width: 2px;
-    height: 22px;
-
-    background: #ffffff;
-    transform: translate(-50%, -50%);
-  }
-
-  .price-controls label {
-    display: inline-block;
-
-    font-size: 14px;
-    line-height: 38px;
-    vertical-align: top;
-
-    cursor: pointer;
-  }
-
-  .price-controls .min-price,
-  .price-controls .max-price {
-    width: 90px;
-    padding-left: 65px;
-  }
-
-  .price-controls input {
-    width: 50px;
-    margin: 0;
-
-    color: inherit;
-    font: inherit;
-
-    background: none;
-    border: none;
-  }
-
-  .range-controls {
-    position: relative;
-
-    margin-bottom: 32px;
-  }
-
-  .range-controls .scale {
-    height: 2px;
-
-    background: rgba(255, 255, 255, 0.3);
-  }
-
-  .range-controls .bar {
-    width: 80%;
-    height: 2px;
-
-    background: #ffffff;
-  }
-
-  .range-toggle {
-    position: absolute;
-    top: -9px;
-
-    width: 4px;
-    height: 4px;
-
-    background: #ababab;
-    border: 8px solid #ffffff;
-    border-radius: 50%;
-    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
-    cursor: pointer;
-  }
-
-  .range-toggle-min {
-    left: 0;
-  }
-
-  .range-toggle-max {
-    left: 80%;
-  }
-
-  .range-toggle:hover {
-    top: -10px;
-
-    border: 9px solid #ffffff;
-  }
-
-  .btn-transparent {
-    display: block;
-    margin: 0 auto;
-    padding: 6px 35px;
-
-    font-size: 14px;
-    line-height: 20px;
-    color: #ffffff;
-    text-transform: uppercase;
-
-    background: transparent;
-    border: 2px solid #ffffff;
-    border-radius: 2px;
-    cursor: pointer;
-  }
-
-  .btn-transparent:hover {
-    color: #000000;
-
-    background: #ffffff;
-  }
-
-
-  /* СЕТКА сортировки */
-  .sorting {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: baseline;
-    margin: 30px 0;
-  }
-
-  .sorting p {
-    /* display: inline-block; */
-    margin: 0;
-    margin-left: 72px;
-    margin-right: 50px;
-  }
-
-  .sort-list {
-    display: flex;
-    flex-grow: 1;
-  }
-
-  .sort-list h3 {
-    margin: 0;
-  }
-
-  .sort-list ul {
-    display: flex;
-    margin: 0;
-  }
-
-  .sort-list li {
-    margin-right: 33px;
-  }
-
-  .sorting .direction {
-    /* display: inline-block; */
-    margin-right: 73px;
-    /* margin-left: auto; */
-  }
-
-
-  /* Сетка модального окна */
-
-
-  .search_hotel-form {
-    padding: 55px;
-    display: flex;
-    flex-direction: column;
-    /* align-items: flex-start; */
-  }
-
-  .search_hotel-form div {
-    flex-basis: 38px;
-    margin-bottom: 29px;
-  }
-
-  .search_hotel-form .dates {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .search_hotel-form .persons {
-    margin-top: 1px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .persons div {
-    display: flex;
-    align-items: center;
-  }
-
-  .persons .adults,
-  .persons .kids {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-
-    justify-content: space-between;
-    width: 50%;
-  }
-
-  .persons label {
-    margin-right: 29px;
-  }
-
-  input[type=number] {
-    -moz-appearance: textfield;
-    text-align: center;
-  }
+input[type=number] {
+  -moz-appearance: textfield;
+  text-align: center;
+}
