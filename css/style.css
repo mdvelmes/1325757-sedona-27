@@ -172,7 +172,7 @@ height: 57px; */
   width: 250px;
 } */
 
-.search {
+.search-block {
   text-align: center;
   font-size: 14px;
   line-height: 24px;
@@ -180,7 +180,7 @@ height: 57px; */
   background-color: #ffffff;
 }
 
-.search h2 {
+.search-block h2 {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -203,6 +203,11 @@ height: 57px; */
 
   background-color: #766357;
   border: none;
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .search-button:hover {
@@ -310,9 +315,9 @@ height: 57px; */
 
 /* модальное окно */
 
-/* .modal {
+.modal {
    display: none;
-} */
+}
 
 .modal-hotel-search {
   font-size: 14px;
@@ -810,7 +815,13 @@ hotel-info p {
   order: -1;
 }
 
-.feature-item,
+.feature-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 256px;
+}
+
 .other-features {
   display: flex;
   justify-content: space-around;
@@ -823,7 +834,22 @@ hotel-info p {
   flex-direction: column;
   align-items: center;
   align-content: stretch;
-  /* flex-basis: 257px; */
+  flex-basis: 400px;
+}
+
+.other-features-item:first-of-type {
+  padding-left: 95px;
+  padding-right: 97px;
+}
+
+.other-features-item:nth-of-type(2) {
+  padding-left: 69px;
+  padding-right: 69px;
+}
+
+.other-features-item:last-of-type {
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .feature-description {
@@ -857,20 +883,27 @@ hotel-info p {
   order: -1;
 }
 
-.search {
+.search-block {
+  position: relative;
   height: 291px;
-  display: flex;
+  display: block;
+  box-sizing: border-box;
+  /* display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
 }
 
 .search-preview {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  margin-top: 57px;
-  margin-bottom: 52px;
+  /* display: flex;
+  flex-direction: column; */
+  /* margin: 0 auto; */
+  /* margin-top: 57px; */
+  /* margin-bottom: 52px; */
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .search-preview p {
