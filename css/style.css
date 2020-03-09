@@ -1,5 +1,5 @@
 body {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f1f1f1;
-  background-image: url(../img/background-photo.jpg);
+  background-image: url("../img/background-photo.jpg");
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -85,7 +85,7 @@ a {
 }
 
 .welcome {
-  /* background-image: url(../img/welcome.svg); */
+  /* background-image: url("../img/welcome.svg"); */
   margin: 76px auto 79px;
   width: 459px;
   height: 353px;
@@ -93,7 +93,7 @@ a {
 }
 
 .welcome::after {
-  content: url(../img/polygon.png);
+  content: url("../img/polygon.png");
   /* width: auto;
 height: 57px; */
   position: absolute;
@@ -210,15 +210,16 @@ height: 57px; */
 }
 
 .map-sedona {
-  background-image: url(../img/map.jpg);
+  background-image: url("../img/map.jpg");
   width: 1200px;
   height: 593px;
+  margin: 0;
 }
 
 /* РАЗМЕТКА футер */
 
 .main-footer {
-  margin-top: 0;
+  margin: 0;
   /* padding: 36px 0; */
   min-height: 120px;
   width: 100%;
@@ -226,7 +227,7 @@ height: 57px; */
 }
 
 .main-footer.home {
-  margin-top: 0;
+  margin: 0;
   /* padding: 36px 0; */
   min-height: 120px;
   width: 100%;
@@ -305,20 +306,6 @@ height: 57px; */
 
 /* модальное окно */
 
-.modal {
-  display: none;
-}
-
-.modal-visible {
-  display: block;
-  animation: pullDown 0.6s;
-}
-
-.modal-error {
-  display: block;
-  animation: shake 0.6s;
-}
-
 .modal-hotel-search {
   font-size: 14px;
   width: 568px;
@@ -332,6 +319,18 @@ height: 57px; */
   left: 316px;
   bottom: 198px;
   box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
+
+  animation: pullDown 0.6s;
+}
+
+.modal-invisible {
+  display: none;
+}
+
+.modal-error {
+  display: block;
+  
+  animation: shake 0.6s;
 }
 
 .button-search {
@@ -592,11 +591,20 @@ hotel-info p {
   background-color: #f2f2f2;
 }
 
+.star {
+ display: inline-block;
+
+  background-image: url("../img/star.svg");
+  width: 18px;
+  height: 17px;
+  margin-left: 5px;
+}
+
 
 /* Фильтры */
 
 .filters {
-  background-image: url(../img/filter-background.jpg);
+  background-image: url("../img/filter-background.jpg");
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -1045,7 +1053,7 @@ hotel-info p {
   width: 23px;
   height: 23px;
   margin-left: -45px;
-  background-image: url(../img/checkbox-off.svg);
+  background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
 }
 
@@ -1054,7 +1062,7 @@ hotel-info p {
   width: 27px;
   height: 23px;
   margin-left: -45px;
-  background-image: url(../img/checkbox-on.svg);
+  background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
 }
 
@@ -1063,7 +1071,7 @@ hotel-info p {
   width: 23px;
   height: 23px;
   margin-left: -45px;
-  background-image: url(../img/checkbox-off-disabled.svg);
+  background-image: url("../img/checkbox-off-disabled.svg");
   background-repeat: no-repeat;
 }
 
@@ -1072,7 +1080,7 @@ hotel-info p {
   width: 27px;
   height: 23px;
   margin-left: -45px;
-  background-image: url(../img/checkbox-on-disabled.svg);
+  background-image: url("../img/checkbox-on-disabled.svg");
   background-repeat: no-repeat;
 }
 

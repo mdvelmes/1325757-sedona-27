@@ -23,7 +23,7 @@ var kids = popup.querySelector("[name=kids]");
 button.addEventListener("click", function(evt) {
     evt.preventDefault();
 
-    popup.classList.toggle("modal-visible");
+    popup.classList.toggle("modal-invisible");
     popup.classList.remove("modal-error");
 });
 
