@@ -124,7 +124,7 @@
             Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне
           </p>
         </div>
-        <button class="search-button">ПОИСК ГОСТИНИЦЫ В седоне</button>
+        <button class="search-field">ПОИСК ГОСТИНИЦЫ В седоне</button>
       </section>
 
       <!-- Карта -->
@@ -205,7 +205,7 @@
           <div class="input-wrapper">
             <input class="input-field" type="text" name="arrival-date" id="arrival-date" value=""
               placeholder="24 апреля 2017">
-            <span class="calendar-icon">
+            <span class="calendar-icon" aria-label="выбор даты из календаря">
               <svg class="calendar-svg" width="21" height="22">
                 <use xlink:href="#calendar-svg"></use>
               </svg>
@@ -218,7 +218,7 @@
           <div class="input-wrapper">
             <input class="input-field" type="text" name="departure-date" id="departure-date" value=""
               placeholder="4 июля 2017">
-            <span class="calendar-icon">
+            <span class="calendar-icon" aria-label="выбор даты из календаря">
               <svg class="calendar-svg" width="21" height="22">
                 <use xlink:href="#calendar-svg"></use>
               </svg>
@@ -229,15 +229,15 @@
         <div class="persons">
           <div>
             <label for="adults">Взрослые:</label>
-            <button class="regulate less" type="button"></button>
+            <button class="regulate less" type="button" aria-label="кнопка уменьшения"></button>
             <input type="number" name="adults" id="adults" step="1" value="2">
-            <button class="regulate more" type="button"></button>
+            <button class="regulate more" type="button" aria-label="кнопка прибавления"></button>
           </div>
           <div>
             <label for="kids">Дети:</label>
-            <button class="regulate less" type="button"></button>
+            <button class="regulate less" type="button"  aria-label="кнопка уменьшения"></button>
             <input type="number" name="kids" id="kids" step="1" value="0">
-            <button class="regulate more" type="button"></button>
+            <button class="regulate more" type="button" aria-label="кнопка прибавления"></button>
           </div>
         </div>
 

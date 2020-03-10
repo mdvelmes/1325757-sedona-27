@@ -11,7 +11,7 @@
 //     }
 // });
 
-var button = document.querySelector(".search-button");
+var button = document.querySelector(".search-field");
 var popup = document.querySelector(".modal");
 
 var form = popup.querySelector("form");

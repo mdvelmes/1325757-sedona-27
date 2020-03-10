@@ -78,6 +78,7 @@ a {
 
 .site-navigation .curent:hover {
   color: #766357;
+  cursor: default;
 }
 
 
@@ -205,7 +206,7 @@ height: 57px; */
   margin: 0;
 }
 
-.search-button {
+.search-field {
   width: 568px;
   height: 86px;
   font: inherit;
@@ -214,22 +215,24 @@ height: 57px; */
   font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
-  text-align: center;
+  /* text-align: center; */
   /* vertical-align: middle; */
   background-color: #766357;
   border: none;
+
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-}
-
-.search-button:hover {
-  background-color: #604e43;
   cursor: pointer;
 }
 
-.search-button:active {
+.search-field:hover {
+  background-color: #604e43;
+
+}
+
+.search-field:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #503e33;
 }
@@ -469,7 +472,7 @@ height: 57px; */
 
 .regulate {
   position: relative;
-  
+
   width: 38px;
   height: 38px;
   padding: 0;
@@ -605,7 +608,8 @@ hotel-info p {
   background-color: #81b3d2;
 }
 
-.more-hotel:hover {
+.more-hotel:hover,
+.more-hotel:focus {
   background-color: #669ec0;
 }
 
@@ -624,7 +628,8 @@ hotel-info p {
   background-color: #766357;
 }
 
-.hotel-reservation:hover {
+.hotel-reservation:hover,
+.hotel-reservation:focus {
   background-color: #604e43;
 }
 
@@ -735,6 +740,10 @@ hotel-info p {
   color: #81b3d2;
 }
 
+.sort-list .curent:hover {
+  cursor: default;
+}
+
 .sort-list .sort-block:active {
   border-bottom: none;
   color: #000000;
@@ -754,6 +763,10 @@ hotel-info p {
 .icon-dir:hover path,
 .icon-dir:focus path {
   fill: #231F20;
+}
+
+.direction .curent:hover {
+  cursor: default;
 }
 
 .direction .curent path,
@@ -1084,6 +1097,11 @@ hotel-info p {
   background-repeat: no-repeat;
 }
 
+.filter-input+.checkbox-indicator:hover,
+.filter-input:checked+.checkbox-indicator:focus {
+  color: #ffffff;
+}
+
 .filter-input:disabled+.checkbox-indicator {
   position: absolute;
   width: 23px;
@@ -1222,7 +1240,8 @@ hotel-info p {
   cursor: pointer;
 }
 
-.btn-transparent:hover {
+.btn-transparent:hover,
+.btn-transparent:focus {
   color: #000000;
   background: #ffffff;
 }
