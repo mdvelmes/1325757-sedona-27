@@ -9,7 +9,7 @@ body {
   padding: 0;
   background-color: #f1f1f1;
   background-image: url("../img/background-photo.jpg");
-  background-position: top center;
+  background-position: top -27px center;
   background-repeat: no-repeat;
 }
 
@@ -85,8 +85,26 @@ a {
 /* основное содержание */
 
 .intro {
+  min-height: 216px;
+
   text-align: center;
   background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.intro h1 {
+  width: 440px;
+  margin: 0 auto;
+  padding: 60px 0 28px;
+  
+  color: #000000;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.intro p {
+  margin: 0 auto;
 }
 
 .welcome {
@@ -113,41 +131,55 @@ height: 57px; */
   height: 57px;
 } */
 
-.intro h1 {
-  color: #000000;
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: bold;
-}
-
 
 /* Преимущества */
 
-.feature-description {
-  text-align: center;
-  line-height: 21px;
-  width: 400px;
-  color: #ffffff;
-  background-color: #81b3d2;
-}
 
-.feature-description h3 {
-  font-size: 21px;
-  line-height: 21px;
-  font-weight: 700;
-  margin: 0;
-}
-
-.feature-description p {
-  text-align: center;
-  width: 300px;
-}
 
 .features-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+
   text-align: center;
   line-height: 21px;
   min-height: 330px;
   background-color: #ffffff;
+}
+
+.features-list h3 {
+  font-size: 21px;
+  line-height: 21px;
+  width: 150px;
+
+  margin: 0;
+  padding-top: 31px;
+padding-bottom: 25px;
+
+  color: #000000;
+}
+
+.features-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 25%;
+
+  margin-top: 58px;
+  /* margin-bottom: 85px; */
+}
+
+.features-list-item:last-of-type h3 {
+  margin-top: -5px;
+  }
+
+.features-list-item p {
+  margin: 0;
+}
+
+.features-list-item img {
+  order: -1;
 }
 
 .other-features {
@@ -156,7 +188,6 @@ height: 57px; */
   background-color: #eeeeee;
 }
 
-.features-list h3,
 .other-features h3 {
   font-size: 21px;
   line-height: 21px;
@@ -823,17 +854,17 @@ hotel-info p {
 } */
 
 .intro {
-  height: 216px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
+  /* min-height: 216px; */
+  /* display: flex; */
+  /* flex-direction: column;
+  justify-content: center; */
+  /* flex-wrap: wrap; */
+  /* align-items: center; */
 }
 
 .intro h1 {
-  width: 450px;
-  margin-bottom: 38px;
+  /* width: 450px;
+  margin-bottom: 38px; */
 }
 
 
@@ -844,36 +875,57 @@ hotel-info p {
   flex-direction: column;
 }
 
-.features-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  /* align-items: center; */
-}
 
-.features-list-item {
-  /* width: 300px; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-basis: 25%;
-  /* flex-grow: 1; */
-}
-
-.features-list-item p {
-  margin: 0;
-}
-
-.features-list-item img {
-  order: -1;
-}
 
 .feature-item {
   display: flex;
   justify-content: space-around;
   align-items: center;
   min-height: 256px;
+}
+
+.feature-item.reverse img {
+  order: -1;
+}
+
+.feature-description {
+  text-align: center;
+  line-height: 21px;
+  width: 400px;
+  padding: 45px 0 60px;
+  color: #ffffff;
+  background-color: #81b3d2;
+}
+
+.feature-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 256px;
+  box-sizing: border-box;
+}
+
+.feature-description h3 {
+  width: 50%;
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.feature-description p {
+  margin: 0;
+  margin-top: 23px;
+  width: 300px;
+}
+
+.feature-item.reverse p {
+  width: 320px;
+}
+
+.feature-description img {
+  display: block;
 }
 
 .other-features {
@@ -906,14 +958,6 @@ hotel-info p {
   padding-right: 70px;
 }
 
-.feature-description {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 256px;
-}
-
 .other-features-item p {
   display: block;
   padding: 0;
@@ -924,17 +968,6 @@ hotel-info p {
   display: block;
   padding: 0;
   margin: 0;
-}
-
-.feature-description img {
-  display: block;
-}
-
-
-/* ПО-РАЗНОМУ ПЕРЕПРОБОВАЛ!!!! НИКАК НЕ РАБОТАЕТ... :first-of-type РАБОТАЕТ, last - НЕТ */
-
-.feature-item.reverse img {
-  order: -1;
 }
 
 /* СЕТКА футер */
