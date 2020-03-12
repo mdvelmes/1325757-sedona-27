@@ -252,7 +252,8 @@ height: 57px; */
 }
 
 .search-preview p {
-  margin: 0;
+  margin: 0 auto;
+  width: 450px;
 }
 
 .search-field {
@@ -304,7 +305,7 @@ height: 57px; */
 .main-footer.home {
   margin: 0;
   /* padding: 36px 0; */
-  min-height: 120px;
+  min-height: 128px;
   width: 100%;
   background-color: #ffffff;
   position: absolute;
@@ -412,6 +413,54 @@ height: 57px; */
   cursor: pointer;
 }
 
+.search-hotel-form {
+  padding: 55px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+}
+
+.search-hotel-form .dates {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 29px;
+  margin-left: 2px;
+}
+
+.search-hotel-form .input-wrapper {
+  position: relative;
+}
+
+.search-hotel-form .persons {
+  margin-top: 1px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 54px;
+}
+
+.persons div {
+  display: flex;
+  align-items: center;
+  /* width: 50%; */
+}
+
+.adults-wrap label {
+  margin-right: 41px;
+}
+
+.kids-wrap label {
+  margin-right: 26px;
+}
+
+.persons .adults,
+.persons .kids {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .search-hotel-form input {
   font: inherit;
   color: #000000;
@@ -428,6 +477,7 @@ height: 57px; */
 
 .search-hotel-form input[type="text"] {
   position: relative;
+  box-sizing: border-box;
   padding-left: 12px;
   width: 346px;
   height: 38px;
@@ -458,6 +508,10 @@ height: 57px; */
 }
 
 .calendar-icon {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+
   fill: #cacaca;
 }
 
@@ -470,13 +524,12 @@ height: 57px; */
   fill: #81b3d2;
 }
 
+/* label[for="adults"] {
+  margin-right: 41px;
+}
 
-/* .search-hotel-form button {
-  width: 38px;
-  height: 38px;
-  background-color: #f2f2f2;
-
-  border: none;
+label[for="kids"] {
+  padding-right: 12px;
 } */
 
 .search-hotel-form .button-search {
@@ -498,15 +551,6 @@ height: 57px; */
   color: rgba(255, 255, 255, 0.3);
   background-color: #5496bd;
 }
-
-
-/* .calendar-icon {
-  background-image: url("/img/calendar.svg");
-  background-repeat: no-repeat;
-  background-position: 326px center;
-
-  opacity: 0.3;
-} */
 
 .persons {
   position: relative;
@@ -867,20 +911,6 @@ hotel-info p {
 .site-navigation li:nth-child(3) {
   margin-left: auto;
 } */
-
-.intro {
-  /* min-height: 216px; */
-  /* display: flex; */
-  /* flex-direction: column;
-  justify-content: center; */
-  /* flex-wrap: wrap; */
-  /* align-items: center; */
-}
-
-.intro h1 {
-  /* width: 450px;
-  margin-bottom: 38px; */
-}
 
 
 /* CЕТКА преимуществ */
@@ -1294,73 +1324,6 @@ hotel-info p {
   /* margin-left: auto; */
 }
 
-
-/* Сетка модального окна */
-
-.search-hotel-form {
-  padding: 55px;
-  display: flex;
-  flex-direction: column;
-  /* align-items: flex-start; */
-}
-
-.search-hotel-form .dates {
-  /* flex-basis: 38px; */
-  margin-bottom: 29px;
-}
-
-.search-hotel-form .dates {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
-/* .search-hotel-form .input-wrapper {
-  display: flex;
-} */
-
-.search-hotel-form .input-wrapper {
-  position: relative;
-}
-
-.search-hotel-form .calendar-icon {
-  position: absolute;
-  top: 9px;
-  left: 326px;
-}
-
-.search-hotel-form .persons {
-  margin-top: 1px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 54px;
-}
-
-.persons div {
-  display: flex;
-  align-items: center;
-}
-
-.persons .adults,
-.persons .kids {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 50%;
-}
-
-.persons label {
-  margin-right: 29px;
-}
-
-
-/* input[type=number] {
-  -moz-appearance: textfield;
-  text-align: center;
-} */
 
 
 /* АНИМАЦИИ */
