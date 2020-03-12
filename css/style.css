@@ -96,7 +96,7 @@ a {
   width: 440px;
   margin: 0 auto;
   padding: 60px 0 28px;
-  
+
   color: #000000;
   font-size: 21px;
   line-height: 26px;
@@ -154,7 +154,7 @@ height: 57px; */
 
   margin: 0;
   padding-top: 31px;
-padding-bottom: 25px;
+  padding-bottom: 25px;
 
   color: #000000;
 }
@@ -172,7 +172,7 @@ padding-bottom: 25px;
 
 .features-list-item:last-of-type h3 {
   margin-top: -5px;
-  }
+}
 
 .features-list-item p {
   margin: 0;
@@ -183,46 +183,64 @@ padding-bottom: 25px;
 }
 
 .other-features {
+  display: flex;
+
+
+
   text-align: center;
   line-height: 21px;
   background-color: #eeeeee;
 }
 
+.other-features-item {
+  width: calc(100% / 3);
+  text-align: center;
+  box-sizing: border-box;
+  padding: 27px 65px 38px 65px;
+  min-height: 256px;
+}
+
 .other-features h3 {
+  display: inline-block;
   font-size: 21px;
   line-height: 21px;
-  width: 150px;
+  max-width: 150px;
   text-align: center;
-  /* margin: 30px 0; */
+
   color: #000000;
 }
 
-
-/* .other-features p {
-  width: 250px;
-} */
+.other-features-item p {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 22px;
+}
 
 .search-block {
-  position: relative;
-
-  height: 291px;
   display: block;
+  min-height: 291px;
+
 
   box-sizing: border-box;
   background-color: #ffffff;
 }
 
 .search-preview {
-  position: absolute;
+  /* position: absolute;
 
   top: 55px;
-  left: 50%;
+  left: 50%; */
 
   text-align: center;
   font-size: 14px;
   line-height: 24px;
 
-  transform: translateX(-50%);
+  box-sizing: border-box;
+  padding-top: 49px;
+
+
+  /* transform: translateX(-50%); */
 }
 
 .search-preview h2 {
@@ -238,6 +256,8 @@ padding-bottom: 25px;
 }
 
 .search-field {
+  display: block;
+  margin: 47px auto 0;
   width: 568px;
   height: 86px;
   font: inherit;
@@ -246,15 +266,10 @@ padding-bottom: 25px;
   font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
-  /* text-align: center; */
-  /* vertical-align: middle; */
+
   background-color: #766357;
   border: none;
 
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
   cursor: pointer;
 }
 
@@ -926,48 +941,6 @@ hotel-info p {
 
 .feature-description img {
   display: block;
-}
-
-.other-features {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 256px;
-}
-
-.other-features-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: stretch;
-  flex-basis: 400px;
-}
-
-.other-features-item:first-of-type {
-  padding-left: 95px;
-  padding-right: 97px;
-}
-
-.other-features-item:nth-of-type(2) {
-  padding-left: 69px;
-  padding-right: 69px;
-}
-
-.other-features-item:last-of-type {
-  padding-left: 70px;
-  padding-right: 70px;
-}
-
-.other-features-item p {
-  display: block;
-  padding: 0;
-  margin: 0;
-}
-
-.other-features-item h3 {
-  display: block;
-  padding: 0;
-  margin: 0;
 }
 
 /* СЕТКА футер */
