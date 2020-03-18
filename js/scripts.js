@@ -1,16 +1,3 @@
-// var button = document.querySelector(".search-button");
-// var popup = document.querySelector(".modal");
-
-// button.addEventListener("click", function(evt) {
-//     evt.preventDefault();
-
-//     if (popup.classList.contains('modal-visible')) {
-//         popup.classList.remove("modal-visible")
-//     } else {
-//         popup.classList.add("modal-visible")
-//     }
-// });
-
 var button = document.querySelector(".search-field");
 var popup = document.querySelector(".modal");
 
