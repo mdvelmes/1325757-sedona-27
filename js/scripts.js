@@ -7,10 +7,12 @@ var departureDate = popup.querySelector("[name=departure-date]");
 var adults = popup.querySelector("[name=adults]");
 var kids = popup.querySelector("[name=kids]");
 
+popup.classList.remove('visible');
+
 button.addEventListener("click", function(evt) {
     evt.preventDefault();
 
-    popup.classList.toggle("modal-invisible");
+    popup.classList.toggle("visible");
     popup.classList.remove("modal-error");
 });
 
