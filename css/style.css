@@ -82,6 +82,7 @@ a {
 }
 
 .site-navigation li {
+  padding: 15px 0;
   width: 153px;
   text-align: center;
 }
@@ -107,10 +108,8 @@ a {
 }
 
 .site-navigation a {
-  display: block;
+  display: inline;
   color: #000000;
-  margin: 15px 0;
-  display: block;
 }
 
 .site-navigation .curent {
@@ -132,6 +131,7 @@ a {
 
 /* WELCOME + маска */
 .intro {
+  position: relative;
   min-height: 216px;
 
   text-align: center;
@@ -162,11 +162,11 @@ a {
   background-repeat: no-repeat;
 }
 
-.welcome::after {
+.intro::before {
   content: url("../img/polygon.png");
 
   position: absolute;
-  top: 507px;
+  top: -57px;
   left: -2px;
 }
 
